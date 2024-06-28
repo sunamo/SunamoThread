@@ -1,3 +1,5 @@
+
+namespace SunamoThread;
 using System.Diagnostics;
 using System.Text;
 

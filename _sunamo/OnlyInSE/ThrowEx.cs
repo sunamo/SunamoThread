@@ -1,3 +1,5 @@
+
+namespace SunamoThread;
 public class ThrowEx
 {
     #region from ThrowExShared.cs - all ok 17-10-21

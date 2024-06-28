@@ -1,3 +1,5 @@
+
+namespace SunamoThread;
 public class TranslateAble
 {
     
