@@ -1,4 +1,3 @@
-
 namespace SunamoThread._sunamo.SunamoValues;
 internal class AllStrings
 {
