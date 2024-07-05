@@ -1,5 +1,5 @@
 
-namespace SunamoThread;
+namespace SunamoThread._sunamo.SunamoExceptions.OnlyInSE;
 using System.Diagnostics;
 using System.Text;
 
