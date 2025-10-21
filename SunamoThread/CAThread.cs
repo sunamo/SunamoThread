@@ -1,3 +1,6 @@
+// EN: Variable names have been checked and replaced with self-descriptive names
+// CZ: Názvy proměnných byly zkontrolovány a nahrazeny samopopisnými názvy
+
 namespace SunamoThread;
 
 public class CAThread
@@ -5,9 +8,9 @@ public class CAThread
     public static List<string> ToListString(IList e)
     {
         // todo přidat SunExt
-        var ls = new List<string>( /*e.Count()*/);
-        foreach (var item in e) ls.Add(item.ToString());
-        return ls;
+        var sourceList = new List<string>( /*e.Count()*/);
+        foreach (var item in e) sourceList.Add(item.ToString());
+        return sourceList;
     }
 
     #region ToList to avoid StackOverflowException
@@ -15,11 +18,11 @@ public class CAThread
     public static List<object> ToList(IList e)
     {
         // todo přidat SunExt
-        var ls = new List<object>( /*e.Count()*/);
+        var sourceList = new List<object>( /*e.Count()*/);
 
-        foreach (var item in e) ls.Add(item);
+        foreach (var item in e) sourceList.Add(item);
 
-        return ls;
+        return sourceList;
     }
 
     #endregion
