@@ -1,35 +1,33 @@
 namespace SunamoThread;
 
+/// <summary>
+/// Provides thread-safe collection conversion utilities.
+/// </summary>
 public class CAThread
 {
-    public static List<string> ToListString(IList e)
+    /// <summary>
+    /// Converts an <see cref="IList"/> to a <see cref="List{T}"/> of strings by calling ToString on each element.
+    /// </summary>
+    /// <param name="list">The source list to convert.</param>
+    /// <returns>A new list of string representations of each element.</returns>
+    public static List<string> ToListString(IList list)
     {
-        // todo přidat SunExt
-        var sourceList = new List<string>( /*e.Count()*/);
-        foreach (var item in e) sourceList.Add(item.ToString());
-        return sourceList;
+        var result = new List<string>();
+        foreach (var item in list) result.Add(item?.ToString() ?? string.Empty);
+        return result;
     }
 
-    #region ToList to avoid StackOverflowException
-
-    public static List<object> ToList(IList e)
+    /// <summary>
+    /// Converts an <see cref="IList"/> to a <see cref="List{T}"/> of objects.
+    /// </summary>
+    /// <param name="list">The source list to convert.</param>
+    /// <returns>A new list containing all elements as objects.</returns>
+    public static List<object> ToList(IList list)
     {
-        // todo přidat SunExt
-        var sourceList = new List<object>( /*e.Count()*/);
+        var result = new List<object>();
 
-        foreach (var item in e) sourceList.Add(item);
+        foreach (var item in list) result.Add(item);
 
-        return sourceList;
+        return result;
     }
-
-    #endregion
-
-    #region ToList to avoid StackOverflowException
-
-    //public static List<object> ToList(IList e)
-    //{
-    //    return se.CAThread.ToList(e);
-    //}
-
-    #endregion
 }
