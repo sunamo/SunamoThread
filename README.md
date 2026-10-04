@@ -1,5 +1,10 @@
 # SunamoThread
 
+## Short description
+
+Knihovna s pomocnými metodami pro vícevláknové aplikace (třída CAThread). Součást sbírky pinp s testy a Runnerem.
+
+
 For using in multi thread apps
 
 ## Overview
