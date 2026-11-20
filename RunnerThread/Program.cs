@@ -1,4 +1,3 @@
-// variables names: ok
 namespace RunnerThread;
 
 internal class Program
